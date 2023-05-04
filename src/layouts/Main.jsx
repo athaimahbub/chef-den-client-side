@@ -7,6 +7,7 @@ import NavigationBar from '../pages/shared/NavigationBar/NavigationBar';
 import Banner from '../pages/Home/Banner/Banner';
 import FoodItems from '../pages/Home/FoodItems/FoodItems';
 import ChefCards from '../pages/Home/ChefCards/ChefCards';
+import LostRecipe from '../pages/Home/LostRecipe/LostRecipe';
 
 const Main = () => {
     return (
@@ -27,7 +28,9 @@ const Main = () => {
                     <FoodItems></FoodItems>
                 </Row>
                 <Row>
-                    <h1>Discover Our Lost Recipes</h1>
+                <h2 className='text-center text-secondary fst-italic mb-4 mt-5'>Explore Our Lost Recipes</h2>
+                   
+                    <LostRecipe></LostRecipe>
                 </Row>
              </Container>
             <Footer></Footer>
