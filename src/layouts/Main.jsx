@@ -19,12 +19,11 @@ const Main = () => {
                     <Banner></Banner>
                 </Row>
                 <Row>
-                  <h2 className='text-center text-primary fst-italic mb-4 mt-4'>Chef card section</h2>
-                    
+                  <h2 className='text-center text-secondary fst-italic mb-4 mt-4'>Our Chef's Zone</h2>
                     <ChefCards></ChefCards>
                 </Row>
                 <Row>
-                    <h2 className='text-center text-primary fst-italic mb-4 mt-5'>Popular Food Items</h2>
+                    <h2 className='text-center text-secondary fst-italic mb-4 mt-4'>Popular Food Items</h2>
                     <FoodItems></FoodItems>
                 </Row>
                 <Row>
