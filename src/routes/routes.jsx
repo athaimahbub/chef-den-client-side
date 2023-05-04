@@ -2,7 +2,9 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
-import Home from "../pages/Home";
+import RecipeLayout from "../layouts/RecipeLayout";
+import Recipe from "../pages/Recipe/Recipe/Recipe";
+// import Home from "../pages/Home";
 // import LoginLayout from "../layouts/LoginLayout";
 // import Login from "../pages/Login/Login";
 
@@ -23,12 +25,18 @@ const router = createBrowserRouter([
     // },
     {
         path: '/',
-        element: <Main></Main>,
+        element: <Main></Main>
+        
+    },
+    {
+        path: 'recipes',
+        element: <RecipeLayout></RecipeLayout>,
         children:[
             {
-                path: '/',
-                element:<Home></Home>
-            },
+                path: ':id',
+                element:<Recipe></Recipe>,
+                loader: ({params}) => fetch('http://localhost:5000/chefBio/${params.id}')
+            }
             
         ]
     }

@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars,react/no-unescaped-entities,no-undef, react/jsx-no-undef,react/prop-types*/
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ChefCards = () => {
     const [chefsData, setChefsData] = useState([]);
@@ -28,7 +29,7 @@ const ChefCards = () => {
               <strong>Likes:</strong> {chef.likes}
             </Card.Text>
             <div className="d-flex justify-content-center">
-                   <Button variant="primary" >View Recipes</Button>
+                   <Button variant="primary"><Link to={'/recipes/${chef.id}'} className='text-decoration-none text-white'>View Recipes</Link></Button>
                 </div>
             
           </Card.Body>

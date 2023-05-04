@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars,react/no-unescaped-entities */
 import React from 'react';
 import Header from '../pages/shared/Header/Header';
 import Footer from '../pages/shared/Footer/Footer';
@@ -19,11 +19,11 @@ const Main = () => {
                     <Banner></Banner>
                 </Row>
                 <Row>
-                  <h2 className='text-center text-secondary fst-italic mb-4 mt-4'>Our Chef's Zone</h2>
+                  <h2 className='text-center text-primary fst-italic mb-4 mt-4'>Our Chef's Zone</h2>
                     <ChefCards></ChefCards>
                 </Row>
                 <Row>
-                    <h2 className='text-center text-secondary fst-italic mb-4 mt-4'>Popular Food Items</h2>
+                    <h2 className='text-center text-primary fst-italic mb-4 mt-4'>Popular Food Items</h2>
                     <FoodItems></FoodItems>
                 </Row>
                 <Row>
