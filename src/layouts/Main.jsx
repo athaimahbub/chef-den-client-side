@@ -5,6 +5,8 @@ import Footer from '../pages/shared/Footer/Footer';
 import { Container, Row } from 'react-bootstrap';
 import NavigationBar from '../pages/shared/NavigationBar/NavigationBar';
 import Banner from '../pages/Home/Banner/Banner';
+import FoodItems from '../pages/Home/FoodItems/FoodItems';
+import ChefCards from '../pages/Home/ChefCards/ChefCards';
 
 const Main = () => {
     return (
@@ -16,10 +18,13 @@ const Main = () => {
                     <Banner></Banner>
                 </Row>
                 <Row>
-                    <h1>Chef card section</h1>
+                  <h2 className='text-center text-primary fst-italic mb-4 mt-4'>Chef card section</h2>
+                    
+                    <ChefCards></ChefCards>
                 </Row>
                 <Row>
-                    <h1>Popular Food Items</h1>
+                    <h2 className='text-center text-primary fst-italic mb-4 mt-5'>Popular Food Items</h2>
+                    <FoodItems></FoodItems>
                 </Row>
                 <Row>
                     <h1>Discover Our Lost Recipes</h1>
