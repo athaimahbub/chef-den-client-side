@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars,react/no-unescaped-entities */
 
 import React, { useState } from 'react';
-import { Button, Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 
 const Header = () => {
     const [isSignedIn, setIsSignedIn] = useState(false);
@@ -9,7 +9,7 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
-        <Navbar.Brand href="/" className='fw-bold fst-italic text-primary'>CHEF's DEN</Navbar.Brand>
+        <Navbar.Brand href="/" className='fw-bold fst-italic text-primary'>Bangalee CHEF's DEN</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
