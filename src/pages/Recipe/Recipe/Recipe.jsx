@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars,react/no-unescaped-entities,no-undef, react/jsx-no-undef,react/prop-types*/
 
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Container, Image, Row, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 // import { useLoaderData } from 'react-router-dom';
 
@@ -34,7 +34,12 @@ const Recipe = () => {
   }, [id]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return(
+      <div className="text-center">
+        <h1>Loading...</h1>;
+        <Spinner animation="border" variant="primary" />
+      </div>
+    ); 
   }
 
   if (error) {
@@ -53,11 +58,11 @@ const Recipe = () => {
                 </Col>
 
                 <Col md={6}>
-                  <h2>{recipeData.chef_name}</h2>
-                  <p>{recipeData.bio}</p>
-                  <p>Likes: {recipeData.likes}</p>
-                  <p>Number of Recipes: {recipeData.num_recipes}</p>
-                  <p>Years of Experience: {recipeData.years_of_experience}</p>
+                  <h2 className='fst-italic text-primary'>{recipeData.chef_name}</h2>
+                  <p className='fst-italic text-secondary'>{recipeData.bio}</p>
+                  <p className='fst-italic text-secondary'><strong>Likes:</strong> {recipeData.likes}</p>
+                  <p className='fst-italic text-secondary'><strong>Number of Recipes:</strong> {recipeData.num_recipes}</p>
+                  <p className='fst-italic text-secondary'><strong>Years of Experience:</strong> {recipeData.years_of_experience}</p>
                 </Col>
         </Row>
       </Container>
