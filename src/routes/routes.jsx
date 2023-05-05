@@ -1,30 +1,18 @@
 /* eslint-disable no-unused-vars,react/jsx-no-undef */
 
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import RecipeLayout from "../layouts/RecipeLayout";
 import Recipe from "../pages/Recipe/Recipe/Recipe";
-import Category from "../pages/Home/Category/Category";
 import BlogLayout from "../layouts/BlogLayout";
+import LoginLayout from "../layouts/LoginLayout";
+import RegisterLayOut from "../layouts/RegisterLayOut";
 // import Home from "../pages/Home";
 // import LoginLayout from "../layouts/LoginLayout";
 // import Login from "../pages/Login/Login";
 
 const router = createBrowserRouter([
-    // {
-    //     path:'/',
-    //     element: <LoginLayout></LoginLayout>,
-    //     children:[
-    //         {
-    //             path:'login',
-    //             element: <Login></Login>
-    //         },
-    //         // {
-    //         //     path:'register',
-    //         //     element: <Register></Register>
-    //         // }
-    //     ]
-    // },
+
     {
         path: '/',
         element: <Main></Main>,
@@ -42,6 +30,15 @@ const router = createBrowserRouter([
             path:'blog',
             element:<BlogLayout></BlogLayout>
     },
+    {
+        path:'login',
+        element: <LoginLayout></LoginLayout>
+    },
+    {
+        path:'register',
+        element: <RegisterLayOut></RegisterLayOut>
+    },
+    
     {
         path: 'recipe',
         element: <RecipeLayout></RecipeLayout>,

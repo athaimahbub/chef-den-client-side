@@ -1,10 +1,13 @@
-/* eslint-disable no-unused-vars,react/no-unescaped-entities */
+/* eslint-disable no-unused-vars,react/no-unescaped-entities,no-undef */
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+// import {AuthContext} from '../../../provider/AuthProvider';
 
 const Header = () => {
+
+  // const {user} = useContext(AuthConText);
     const [isSignedIn, setIsSignedIn] = useState(false);
     return (
         <div>
@@ -21,7 +24,13 @@ const Header = () => {
             <Link to={"/blog"} className='text-decoration-none'>  Blog</Link>
               </Nav.Link>
 
-               {isSignedIn ? <Nav.Link href="/blog" className='text-primary'><img src="user-profile-picture.jpg" alt="" /></Nav.Link> : <Button variant="primary">Login</Button> }
+              {/* <Nav.Link href="/blog" className='text-primary'>
+                     {user.displayName}
+              </Nav.Link> */}
+
+               {isSignedIn ? <Nav.Link href="/blog" className='text-primary'><img src="user-profile-picture.jpg" alt="" /></Nav.Link> : <Button variant="primary">
+               <Link to={"/login"} className='text-decoration-none text-white'>Login</Link>
+                </Button> }
           </Nav>
         </Navbar.Collapse>
       </Container>

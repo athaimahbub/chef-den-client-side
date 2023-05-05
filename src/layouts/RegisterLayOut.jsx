@@ -1,21 +1,18 @@
-/* eslint-disable no-unused-vars,react/no-unescaped-entities,no-undef, react/jsx-no-undef*/
-
+/* eslint-disable no-unused-vars,react/no-unescaped-entities,no-undef */
 import React from 'react';
-
 import Header from '../pages/shared/Header/Header';
 import Footer from '../pages/shared/Footer/Footer';
-import Login from '../pages/Login/Login';
 import Register from '../pages/Login/Register';
 
-const LoginLayout = () => {
+const RegisterLayOut = () => {
     return (
         <div>
+            <h1>.diufhgf.....</h1>
             <Header></Header>
-            <Login></Login>
-            
+            <Register></Register>
             <Footer></Footer>
         </div>
     );
 };
 
-export default LoginLayout;
+export default RegisterLayOut;
