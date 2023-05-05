@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars,react/no-unescaped-entities */
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -13,16 +14,18 @@ const Footer = () => {
           <Col md={6} className="text-center text-md-end">
             <ul className="list-inline">
               <li className="list-inline-item">
-                <a href="#">Home</a>
+                <Link to={"/"} className='text-decoration-none'>Home</Link>
+                
               </li>
               <li className="list-inline-item">
-                <a href="#">Blog</a>
+               <Link to={"/blog"} className='text-decoration-none'>Blog</Link>
+                
               </li>
               <li className="list-inline-item">
-                <a href="#">Login</a>
+              <Link to={"/login"} className='text-decoration-none'>Login</Link>
               </li>
               <li className="list-inline-item">
-                <a href="#">Contact</a>
+              <Link to={"/register"} className='text-decoration-none'>Register</Link>
               </li>
             </ul>
           </Col>

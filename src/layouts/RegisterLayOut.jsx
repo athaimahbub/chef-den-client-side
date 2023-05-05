@@ -7,7 +7,7 @@ import Register from '../pages/Login/Register';
 const RegisterLayOut = () => {
     return (
         <div>
-            <h1>.diufhgf.....</h1>
+            
             <Header></Header>
             <Register></Register>
             <Footer></Footer>

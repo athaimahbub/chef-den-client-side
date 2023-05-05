@@ -49,7 +49,7 @@ const Recipe = () => {
         <div>
             {/* <h2>Recipe Section.....{id}</h2> */}
             <Container>
-             <Row className='d-flex align-items-center'>
+             <Row className='d-flex align-items-center mt-3'>
           
                 <Col md={6}>
                    <div className=" py-4">
