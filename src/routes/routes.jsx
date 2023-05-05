@@ -46,7 +46,7 @@ const router = createBrowserRouter([
             {
                 path: ':id',
                 element:<Recipe></Recipe>,
-                loader: ({params}) => fetch(`http://localhost:5000/chefBio/${params.id}`)
+                loader: ({params}) => fetch(`https://b7a10-chef-recipe-hunter-server-side-athaimahbub.vercel.app/chefBio/${params.id}`)
             }
             
         ]

@@ -8,7 +8,7 @@ const ChefCards = () => {
     const [chefsData, setChefsData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/chefBio')
+        fetch('https://b7a10-chef-recipe-hunter-server-side-athaimahbub.vercel.app/chefBio')
          .then(res => res.json())
          .then(data => setChefsData(data))
          .catch(error => console.error(error))

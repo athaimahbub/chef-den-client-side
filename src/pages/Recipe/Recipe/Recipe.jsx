@@ -16,7 +16,7 @@ const Recipe = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/chefBio/${id}`);
+        const response = await fetch(`https://b7a10-chef-recipe-hunter-server-side-athaimahbub.vercel.app/chefBio/${id}`);
         if (response.ok) {
           const data = await response.json();
           setRecipeData(data);
