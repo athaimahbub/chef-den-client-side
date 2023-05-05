@@ -5,6 +5,7 @@ import Main from "../layouts/Main";
 import RecipeLayout from "../layouts/RecipeLayout";
 import Recipe from "../pages/Recipe/Recipe/Recipe";
 import Category from "../pages/Home/Category/Category";
+import BlogLayout from "../layouts/BlogLayout";
 // import Home from "../pages/Home";
 // import LoginLayout from "../layouts/LoginLayout";
 // import Login from "../pages/Login/Login";
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
         //     }
         // ]
         
+    },
+    {
+            path:'blog',
+            element:<BlogLayout></BlogLayout>
     },
     {
         path: 'recipe',

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isSignedIn, setIsSignedIn] = useState(false);
@@ -13,8 +14,13 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="/" className='text-primary'>Home</Nav.Link>
-            <Nav.Link href="/blog" className='text-primary'>Blog</Nav.Link>
+            <Nav.Link href="/" className='text-primary'>
+              <Link to={"/"} className='text-decoration-none'>  Home</Link>  
+              </Nav.Link>
+            <Nav.Link href="/blog" className='text-primary'>
+            <Link to={"/blog"} className='text-decoration-none'>  Blog</Link>
+              </Nav.Link>
+
                {isSignedIn ? <Nav.Link href="/blog" className='text-primary'><img src="user-profile-picture.jpg" alt="" /></Nav.Link> : <Button variant="primary">Login</Button> }
           </Nav>
         </Navbar.Collapse>

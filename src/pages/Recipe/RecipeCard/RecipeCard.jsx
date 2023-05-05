@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Container, Table, Toast } from 'react-bootstrap';
+import Rating from 'react-rating';
+import { FaRegStar, FaStar } from 'react-icons/fa';
 
 
 const RecipeCard = () => {
@@ -28,22 +30,26 @@ const RecipeCard = () => {
         <Card key={index} className="mb-4">
             <Card.Img className='img-fluid' variant="top" src={recipe.image} alt={recipe.recipe_name} />
           <Card.Body>
-        <Card.Title>{recipe.recipe_name}</Card.Title>
-        <Card.Text>
-          <strong>Ingredients:</strong>
+        <Card.Title className='text-center text-primary fst-italic fs-2'>{recipe.recipe_name}</Card.Title>
+        <Card.Text className='fst-italic'>
+          <strong className='text-secondary'>Ingredients:</strong>
           <ul>
             {recipe.ingredients.map((ingredient, index) => (
               <li key={index}>{ingredient}</li>
             ))}
           </ul>
-          <strong>Cooking Method:</strong>
+          <strong className='text-secondary'>Cooking Method:</strong>
           <p>{recipe.cooking_method}</p>
-          <strong>Rating: {recipe.rating}</strong>
+          <strong className='text-secondary'>Rating: {recipe.rating}</strong>
           <div className='flex-grow-1 d-flex align-items-center'>
                     <Rating
-                        style={{ maxWidth: 150 }}
-                        value={Math.round(rating?.number || 0)} readOnly />
-                    <span className='ms-2'> {rating?.number}</span>
+                        placeholderRating={recipe.rating}
+                         readOnly
+                         emptySymbol={<FaRegStar></FaRegStar>}
+                         placeholderSymbol={<FaStar className="text-warning"></FaStar>}
+                         fullSymbol={<FaStar></FaStar>}
+                          />
+                    <span className='ms-2'> {recipe.rating?.number}</span>
           </div>
         </Card.Text>
         {!isFavorite ? (
