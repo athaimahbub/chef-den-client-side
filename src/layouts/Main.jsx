@@ -8,6 +8,7 @@ import Banner from '../pages/Home/Banner/Banner';
 import FoodItems from '../pages/Home/FoodItems/FoodItems';
 import ChefCards from '../pages/Home/ChefCards/ChefCards';
 import LostRecipe from '../pages/Home/LostRecipe/LostRecipe';
+import { Outlet } from 'react-router-dom';
 
 const Main = () => {
     return (

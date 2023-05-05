@@ -4,6 +4,7 @@ import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ChefCards = () => {
+  
     const [chefsData, setChefsData] = useState([]);
 
     useEffect(() => {
@@ -29,7 +30,7 @@ const ChefCards = () => {
               <strong>Likes:</strong> {chef.likes}
             </Card.Text>
             <div className="d-flex justify-content-center">
-                   <Button variant="primary"><Link to={'/recipes/${chef.id}'} className='text-decoration-none text-white'>View Recipes</Link></Button>
+                   <Link to={`/recipe/${chef.id}`} ><Button variant="primary">View Recipes</Button></Link>
                 </div>
             
           </Card.Body>

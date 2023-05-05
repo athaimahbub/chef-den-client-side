@@ -13,11 +13,11 @@ const RecipeLayout = () => {
             <Header></Header>
             <Container>
                <Row>
-                    <h1>Banner section</h1>
+                    <Recipe></Recipe>
                </Row>
                <Row>
                     <h1>Recipe card section</h1>
-                    <Recipe></Recipe>
+                    
                </Row>
             </Container>
             <Footer></Footer>
